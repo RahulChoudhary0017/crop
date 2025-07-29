@@ -1,0 +1,47 @@
+{% extends 'base.html' %}
+{% block title %}Predict | Smart Crop Predictor{% endblock %}
+{% block content %}
+<div class="form-box">
+    <h1><span style='font-size:1.5rem;'>🌱</span> Crop Prediction Form</h1>
+    <form action="/predict" method="post">
+        <label>Soil Type:</label>
+        <select name="soil_type" required>
+            <option value="">--Select--</option>
+            <option>Alluvial</option>
+            <option>Black</option>
+            <option>Red</option>
+            <option>Laterite</option>
+        </select>
+        <label>Temperature (°C):</label>
+        <input type="number" step="0.1" name="temperature" required placeholder="Enter temperature">
+        <label>Rainfall (mm):</label>
+        <input type="number" name="rainfall" required placeholder="Enter rainfall">
+        <label>pH Value:</label>
+        <input type="number" step="0.1" name="ph" required placeholder="Enter pH value">
+        <button type="submit">Predict Crop</button>
+    </form>
+</div>
+
+{% if error %}
+<div class="form-box" style="margin-top: 24px; background: #ffeaea; border: 1.5px solid #d32f2f; color: #d32f2f;">
+    <b>Error:</b> {{ error }}
+</div>
+{% endif %}
+
+{% if result %}
+<div class="form-box" style="margin-top: 24px; max-width: 520px;">
+    <h1 style="color: #2e8b57;">Recommended Crop</h1>
+    <h2 style="color: #185a9d; margin-bottom: 8px;">{{ result.crop }} <span style="color:#2e8b57;">({{ result.hindi }})</span></h2>
+    <img src="{{ result.image_url }}" alt="{{ result.crop }}" style="width: 100%; max-width: 260px; height: auto; border-radius: 8px; margin: 18px 0 10px 0;">
+    <div class="details" style="text-align:left; margin: 18px 0 10px 0; color: #444; font-size: 1rem;">
+        <div><b>Season:</b> {{ result.season }}</div>
+        <div><b>Description:</b> {{ result.desc }}</div>
+        <div><b>Soil Type:</b> {{ result.soil }}</div>
+        <div><b>Temperature:</b> {{ result.temperature }}°C</div>
+        <div><b>Rainfall:</b> {{ result.rainfall }}mm</div>
+        <div><b>pH Value:</b> {{ result.ph }}</div>
+    </div>
+    <a href="/predict" class="btn" style="margin-top: 18px; display: inline-block;">Back</a>
+</div>
+{% endif %}
+{% endblock %}

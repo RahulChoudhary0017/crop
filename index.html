@@ -1,0 +1,98 @@
+{% extends 'base.html' %}
+{% block title %}Home | Smart Crop Predictor{% endblock %}
+{% block content %}
+<!-- Hero Section -->
+<div class="hero">
+    <div style="flex: 1 1 320px; min-width: 320px; max-width: 480px;">
+        <h1 class="hero-title">Welcome to <span class="accent">Smart Crop Predictor</span></h1>
+        <p class="hero-desc">Empowering <b>farmers</b>, <b>students</b>, and <b>researchers</b> with <b>AI-powered crop recommendations</b> and trusted agricultural information. Make smarter decisions for a better yield and sustainable farming.</p>
+        <a href="/predict" class="cta-btn">Predict Now</a>
+    </div>
+    <div style="flex: 1 1 320px; min-width: 320px; max-width: 420px; text-align: center;">
+        <img src="/static/smart-farming-and-precision-agriculture__720.jpg" alt="Smart Farming" class="hero-img">
+    </div>
+</div>
+
+<!-- Features Section -->
+<h2 class="section-title">Why Use Smart Crop Predictor?</h2>
+<div class="features">
+    <div class="feature-card">
+        <div class="feature-icon">🤖</div>
+        <div class="feature-title">AI-Powered Prediction</div>
+        <div class="feature-desc">Get accurate crop recommendations based on your soil, weather, and field data.</div>
+    </div>
+    <div class="feature-card">
+        <div class="feature-icon">📚</div>
+        <div class="feature-title">Crop Knowledge Base</div>
+        <div class="feature-desc">Explore detailed information about popular crops, their seasons, and best practices.</div>
+    </div>
+    <div class="feature-card">
+        <div class="feature-icon">🌱</div>
+        <div class="feature-title">Easy to Use</div>
+        <div class="feature-desc">Simple, mobile-friendly interface for everyone — no technical skills required.</div>
+    </div>
+    <div class="feature-card">
+        <div class="feature-icon">🌏</div>
+        <div class="feature-title">For All Stakeholders</div>
+        <div class="feature-desc">Designed for farmers, students, and researchers to boost agricultural success.</div>
+    </div>
+</div>
+
+<!-- Quick Links Section -->
+<h2 class="section-title-green">Quick Links</h2>
+<div class="quick-links">
+    <a href="/" style="text-decoration:none;">
+        <div class="quick-link-card">
+            <div class="quick-link-icon">🏠</div>
+            <div class="quick-link-title">Home</div>
+            <div class="quick-link-desc">Landing page & introduction</div>
+        </div>
+    </a>
+    <a href="/predict" style="text-decoration:none;">
+        <div class="quick-link-card">
+            <div class="quick-link-icon">🔎</div>
+            <div class="quick-link-title">Predict</div>
+            <div class="quick-link-desc">Get crop recommendations</div>
+        </div>
+    </a>
+    <a href="/about" style="text-decoration:none;">
+        <div class="quick-link-card">
+            <div class="quick-link-icon">ℹ️</div>
+            <div class="quick-link-title">About</div>
+            <div class="quick-link-desc">Know about this project</div>
+        </div>
+    </a>
+    <a href="/contact" style="text-decoration:none;">
+        <div class="quick-link-card">
+            <div class="quick-link-icon">✉️</div>
+            <div class="quick-link-title">Contact</div>
+            <div class="quick-link-desc">Get in touch with us</div>
+        </div>
+    </a>
+</div>
+
+<!-- Popular Crops Section -->
+<h2 class="section-title">Popular Crops</h2>
+<div class="crops">
+    <div class="card">
+        <img src="/static/images/download.jpeg" alt="Wheat">
+        <h3>Wheat</h3>
+        <p>Wheat is a staple food used to make flour for bread, pasta, pastry, etc.</p>
+    </div>
+    <div class="card">
+        <img src="/static/images/crop_rice.jpg" alt="Rice">
+        <h3>Rice</h3>
+        <p>Rice is a primary food crop grown in wet environments. It's a dietary staple globally.</p>
+    </div>
+    <div class="card">
+        <img src="/static/images/crop_maize.jpg" alt="Maize">
+        <h3>Maize (Corn)</h3>
+        <p>Maize is used for human consumption, animal feed, and industrial products.</p>
+    </div>
+    <div class="card">
+        <img src="/static/images/crop_mungbean.jpg" alt="Soybean (Mungbean substitute)">
+        <h3>Soybean</h3>
+        <p>Soybeans are rich in protein and used for oil, animal feed, and tofu production.</p>
+    </div>
+</div>
+{% endblock %}

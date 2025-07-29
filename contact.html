@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% block title %}Contact | Smart Crop Predictor{% endblock %}
+{% block content %}
+<div class="form-container">
+    <h1><span style='font-size:1.5rem;'>📬</span> Contact Us</h1>
+    <form>
+        <label>Your Name:</label>
+        <input type="text" required placeholder="Enter your name">
+        <label>Email:</label>
+        <input type="email" required placeholder="Enter your email">
+        <label>Message:</label>
+        <textarea rows="5" required placeholder="Type your message..."></textarea>
+        <button type="submit">Send Message</button>
+    </form>
+    <p style="margin-top: 24px; color: #185a9d; font-size: 1rem;">You can also reach us at <a href="mailto:info@smartcroppredictor.com" style="color:#2e8b57; text-decoration:underline;">info@smartcroppredictor.com</a></p>
+</div>
+{% endblock %}

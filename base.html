@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{% block title %}Smart Crop Predictor{% endblock %}</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/styles.css">
+    {% block head %}{% endblock %}
+</head>
+<body>
+    <div class="navbar">
+        <div class="logo"><span>🌱</span> Smart Crop Predictor</div>
+        <nav>
+            <a href="/" class="{% if request.path == '/' %}active{% endif %}">Home</a>
+            <a href="/predict" class="{% if request.path.startswith('/predict') %}active{% endif %}">Predict</a>
+            <a href="/about" class="{% if request.path == '/about' %}active{% endif %}">About</a>
+            <a href="/contact" class="{% if request.path == '/contact' %}active{% endif %}">Contact</a>
+            <a href="/history" class="{% if request.path == '/history' %}active{% endif %}">History</a>
+        </nav>
+    </div>
+    <div class="content">
+        {% block content %}{% endblock %}
+    </div>
+    <footer>
+        &copy; 2025 Smart Crop Predictor. All rights reserved.
+    </footer>
+    <script src="/static/main.js"></script>
+</body>
+</html> 
